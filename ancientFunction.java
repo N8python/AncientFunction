@@ -6,18 +6,21 @@ public class ancientFunction {
     void accept(T t);
   }
   public interface BiFunction<T, U, R> {
-    R apply(T param1, U param2);
+    R apply(T t, U u);
   }
   public interface Function<T, U> {
-    U apply(T param1);
+    U apply(T t);
   }
   public interface BinaryOperator<T> {
-    T apply(T param1, T param2);
+    T apply(T t, T u);
   }
   public interface UnaryOperator<T> {
-    T apply(T param1);
+    T apply(T t);
   }
   public interface Predicate<T> {
     boolean test(T t);
+  }
+  public interface BiPredicate<T, U> {
+    boolean test(T t, U u);
   }
 }
